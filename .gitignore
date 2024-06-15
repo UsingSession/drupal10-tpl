@@ -1,0 +1,17 @@
+# Ignore core when managing all of a project's dependencies with Composer.
+# including Drupal core.
+web/*
+vendor/*
+.ddev/*
+
+!.ddev/config.yaml
+!web/modules/custom/*
+
+# Ignore IDE configs
+.idea
+.DS_Store
+
+.DS_store
+
+# Ignore .htaccess (its created during deployment)
+web/.htaccess
