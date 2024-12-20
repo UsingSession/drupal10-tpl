@@ -22,7 +22,10 @@
     <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
     <env name="SIMPLETEST_BASE_URL" value="https://drupal-dev.ddev.site/"/>
     <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/database_name#table_prefix -->
-    <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>
+<!--    <env name="SIMPLETEST_DB" value="mysql://db:db@db/db"/>-->
+    <env name="SIMPLETEST_DB" value="sqlite://localhost/sites/default/files/db.sqlite"/>
+
+
     <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: /path/to/webroot/sites/simpletest/browser_output -->
     <env name="BROWSERTEST_OUTPUT_DIRECTORY" value="/var/www/html/web/sites/simpletest/browser_output"/>
     <!-- By default, browser tests will output links that use the base URL set
