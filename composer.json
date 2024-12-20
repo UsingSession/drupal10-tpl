@@ -35,11 +35,12 @@
     "config": {
         "allow-plugins": {
             "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true
         },
         "sort-packages": true
     },
@@ -99,5 +100,18 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "scripts" : {
+        "post-update-cmd": [
+            "mkdir -p web/sites/default/files/private",
+            "chmod 755 web/sites/default/files/private",
+            "mkdir -p web/sites/simpletest",
+            "mkdir -p web/sites/simpletest/browser_output",
+            "chmod 777 web/sites/simpletest"
+        ]
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.4",
+        "phpunit/phpunit": "^9.6"
     }
 }
